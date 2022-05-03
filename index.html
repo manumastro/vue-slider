@@ -29,20 +29,20 @@
                 <div class="thumbs">
                     <div @click="prevPhoto()" class="prev"></div>
                     <div @click="nextPhoto()" class="next"></div>
-                    <div class="thumb active">
-                        <img src="img/01.jpg" alt="Svezia"/>
+                    <div :class="{'active' : counterIndex === 0}" class="thumb">
+                        <img @click="counterIndex = 0" src="img/01.jpg" alt="Svezia"/>
                     </div>
-                    <div class="thumb">
-                        <img src="img/02.jpg" alt="Svizzera" />
+                    <div :class="{'active' : counterIndex === 1}" class="thumb">
+                        <img @click="counterIndex = 1" src="img/02.jpg" alt="Svizzera" />
                     </div>
-                    <div class="thumb">
-                        <img src="img/03.jpg" alt="Gran Bretagna" />
+                    <div :class="{'active' : counterIndex === 2}" class="thumb">
+                        <img @click="counterIndex = 2" src="img/03.jpg" alt="Gran Bretagna" />
                     </div>
-                    <div class="thumb">
-                        <img src="img/04.jpg" alt="Germania" />
+                    <div :class="{'active' : counterIndex === 3}" class="thumb">
+                        <img @click="counterIndex = 3" src="img/04.jpg" alt="Germania" />
                     </div>
-                    <div class="thumb">
-                        <img src="img/05.jpg" alt="Paradise" />
+                    <div :class="{'active' : counterIndex === 4}" class="thumb">
+                        <img @click="counterIndex = 4" src="img/05.jpg" alt="Paradise" />
                     </div>
                 </div>
 

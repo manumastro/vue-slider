@@ -45,6 +45,7 @@ const app = new Vue({
     
     data: {
         counterIndex: 0,
+        thumbClicked: false,
         items: slides,
     },
     
@@ -58,11 +59,12 @@ const app = new Vue({
         },
         nextPhoto(){
             this.counterIndex++;
-            if(this.counterIndex > 5){
+            if(this.counterIndex > 4){
                 this.counterIndex = 0;
             }
             console.log(this.counterIndex);
-        }
+        },
+      
     },
 
     mounted(){
