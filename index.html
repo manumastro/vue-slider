@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div @mouseover="mouseLeave = false" @mouseleave="mouseLeave = true" class="thumbs">
                     <div @click="prevPhoto()" class="prev"></div>
                     <div @click="nextPhoto()" class="next"></div>
                     <div :class="{'active' : counterIndex === 0}" class="thumb">

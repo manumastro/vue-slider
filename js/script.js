@@ -47,6 +47,7 @@ const app = new Vue({
         counterIndex: 0,
         thumbClicked: false,
         items: slides,
+        mouseLeave: true,
     },
     
     methods:{
@@ -55,19 +56,24 @@ const app = new Vue({
             if(this.counterIndex < 0){
                 this.counterIndex = this.items.length - 1;
             }
-            console.log(this.counterIndex);
+            //console.log(this.counterIndex);
         },
         nextPhoto(){
             this.counterIndex++;
             if(this.counterIndex > 4){
                 this.counterIndex = 0;
             }
-            console.log(this.counterIndex);
+            //console.log(this.counterIndex);
         },
-      
     },
 
     mounted(){
         console.log(this.counterIndex);
+        
+        stop = setInterval(intervalFunction = () => { 
+            if(this.mouseLeave === true){
+                this.nextPhoto();
+            }
+        }, 3000)
     }
 })
